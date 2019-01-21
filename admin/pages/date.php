@@ -69,10 +69,10 @@
                                     <form method="POST">
                                         <div class="row">
                                             <div class="col">
-                                                From<br><input type="date" value="data" name="date_start"><br>
+                                                From<br><input type="date" value="<?php if(isset($_POST['save'])){ echo $_POST['date_start']; }?>" name="date_start"><br>
                                             </div>
                                             <div class="col">
-                                                To<br><input type="date" value="data" name="date_end"><br>
+                                                To<br><input type="date" value="<?php if(isset($_POST['save'])){ echo $_POST['date_end']; }?>" name="date_end"><br>
                                             </div>
                                             <div class="col">
                                                 <select name="category" class="btn btn-prima" style="margin-top:18px;font-size:14px">
