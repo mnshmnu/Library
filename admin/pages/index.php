@@ -228,6 +228,7 @@
   							</div>
 						</div>
 					</div><!-- Digital Clock Display Ends here -->
+<<<<<<< HEAD
 					<div class="s130">
 							<form method="POST">
 								<div class="inner-form">
@@ -245,6 +246,9 @@
 								</div>
 							</form>
 					</div>
+=======
+				
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
 				</div><!-- end of col-->
 				</div><!-- end of rowl-->
 

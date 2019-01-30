@@ -3,7 +3,11 @@
 body{
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     background: url("img/jecd.jpg");
+=======
+    background: url("img/jecc.jpg");
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -29,7 +33,11 @@ img {
 .login-box{
     width: 320px;
     height: 320px;
+<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.8);
+=======
+    background: rgba(0, 0, 0, 0.5);
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
     color: #fff;
     top: 50%;
     left: 700px;

@@ -27,8 +27,11 @@
 
         <link rel="stylesheet" type="text/css" href="../dist/css/style.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+<<<<<<< HEAD
         <link rel="stylesheet" type="text/css" href="css/calender.css">
         <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+=======
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
         <!-- Datatable Stylesheet -->
@@ -67,6 +70,7 @@
                             <div class="row">
                                 <!-- Small boxes (Stat box) -->
 
+<<<<<<< HEAD
 
                                 <!-- NEW INTERFACE -->
                                 <div class="col">
@@ -137,6 +141,11 @@
                                 <!--
                                     <form method="POST">
                                         <div class="row">                            
+=======
+                                <div class="col">
+                                    <form method="POST">
+                                        <div class="row">
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
                                             <div class="col">
                                                 From<br><input type="date" value="<?php if(isset($_POST['save'])){ echo $_POST['date_start']; }?>" name="date_start"><br>
                                             </div>
@@ -159,7 +168,10 @@
                                             </div>
                                         </div><br>
                                     </form><br>
+<<<<<<< HEAD
                                 -->
+=======
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
                                 </div>
                             </div>
                             <div class="row">
@@ -474,6 +486,7 @@
         });
     });
 </script>
+<<<<<<< HEAD
 <script src="js/extention/flatpickr.js"></script>
         <script>
             flatpickr(".datepicker",
@@ -496,4 +509,7 @@
                 })
             }
         </script>
+=======
+
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
 <!-- Datatable Javascrpit -->

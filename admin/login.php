@@ -215,7 +215,11 @@ alt="Jyothi Official Website">
 
 
     <div class="navbar" style="height:50px;background-color:#212529">
+<<<<<<< HEAD
         <footer id="footer" class="footer-1" style="padding-top:10px;padding-left:250px;">
+=======
+        <footer id="footer" class="footer-1" style="padding-top:10px;padding-left:50px;">
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
             <div class="container">       
                 <div class="row">
                 <!-- Copy Right Logo -->

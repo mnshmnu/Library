@@ -11,6 +11,7 @@ html {
 }
 */
 
+<<<<<<< HEAD
 body{
   margin: 0;
   padding: 0;
@@ -25,6 +26,8 @@ body{
   font-family: sans-serif;
   }
 
+=======
+>>>>>>> d007bcc108498ebf48325717fac6a07a84a807cf
 .clock-container {
   position: fixed;
   left: 75%;
