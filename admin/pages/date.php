@@ -131,11 +131,15 @@
                                                     <div>Visits In Between</div>
                                                     <?php 
                                                 if(isset($_POST['save'])){
-                                                    echo "STAFF : ".$staff_btwn;
+                                                    if($category=="staff" OR $category=="all"){
+                                                        echo "STAFF : ".$staff_btwn;
+                                                        ?> <br> <?php
+                                                    }
                                                     ?>
-                                                    <br>
                                                     <?php
+                                                    if($category=="students" OR $category=="all"){
                                                     echo "STUDENT : ".$student_btwn;
+                                                    }
                                         ?>
                                                 </div>
                                             </div>
