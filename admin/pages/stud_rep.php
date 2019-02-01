@@ -83,8 +83,14 @@
                             <td><?php echo $row['name']; ?></td>
                             <td><?php echo $row['dept']; ?></td>
                             <td><?php echo $row['sem']; ?></td>
-                            <td><?php echo $row['datetime_in']; ?></td>
-                            <td><?php echo $row['datetime_out']; ?></td>
+                            <td><?php
+                                $originalDate =$row['datetime_in'];
+                                $dateTime = date_create($originalDate);
+                                echo date_format($dateTime, 'd-m-Y H:m:s'); ?></td>
+                            <td><?php
+                             $originalDate =$row['datetime_out'];
+                                $dateTime = date_create($originalDate);
+                                echo date_format($dateTime, 'd-m-Y H:m:s'); ?></td>
                         </tr>
                         <?php } ?>
                     </tbody>
