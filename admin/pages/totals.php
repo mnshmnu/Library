@@ -350,6 +350,15 @@
                     <option value="<?php echo date('Y-m-d H:i:s', strtotime("-1 year")); ?>">From Last year onwards
                 </select>
             </form>
+            <br>
+            <?php 
+            if(isset($_POST['timeline'])){
+            ?>
+                Displaying reports from <?php echo $timeline ;?>.
+
+            <?php 
+            }
+            ?>
 
             <!-- Reports-specified-time-frame -->
                 <div class="row">
