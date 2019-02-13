@@ -197,7 +197,7 @@
 
                                 if($category=="students" || $category=="all"){
                                     if(mysqli_num_rows($selstud)>0){
-                                        // Datatable content-Staff
+                                        // Datatable content-Student
                                         ?>
                                         <table id="table_student">
                                             <thead>
@@ -241,6 +241,9 @@
                                             </tr>
                                             <?php 
                                         }
+                                        ?>
+                                        </table>
+                                        <?php
 
                                             // Datatable content-Student
                                     }

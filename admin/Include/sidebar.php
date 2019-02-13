@@ -11,6 +11,7 @@
 						<li><a href="reports.php">Reports</a></li>
 						<li><a href="date.php">DateWise Scans</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
+						<li><a href="active.php">Active Users</a></li>
 					</ul>
 			</li>
 			<li>
