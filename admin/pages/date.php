@@ -115,7 +115,7 @@
                         ?>
 
                                 <div class="col">
-                                    <div class="panel panel-yellow">
+                                    <div class="paneli panel-yellow">
                                         <?php 
                                     if(isset($_POST['save'])){
                                 ?>

@@ -7,11 +7,12 @@
 					<a href="#pageSubmenu" style="color:#05a8f3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Page</a>
 					<ul class="list-unstyled" id="pageSubmenu">
 						<li><a href="index.php">Home</a></li>
+						<li><a href="active.php">Active Users</a></li>
 						<li><a href="totals.php">Total Visits</a></li>
 						<li><a href="reports.php">Reports</a></li>
 						<li><a href="date.php">DateWise Scans</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
-						<li><a href="active.php">Active Users</a></li>
+						
 					</ul>
 			</li>
 			<li>
