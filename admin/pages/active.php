@@ -48,31 +48,106 @@
     <!--Side Bar/Menu-->
     <?php include '../Include/sidebar.php';?>
 		<!--/-Side Bar/Menu  ended-->
-        <div class="content">
-        <table id="active">
-            <thead>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Department</th>
-                <th>Semester</th>
-            </thead>
+
+        <div class="row">
+        <!-- Small boxes (Stat box) -->
+
+            <div class="col">
+                <form method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <select name="category" id="category" class="btn btn-prima" style="margin-top:18px;margin-left:18px;font-size:14px" required>
+                                <option value="">Select Category
+                                <option value="all">All
+                                <option value="students">Students
+                                <option value="staff">Staff
+                            </select>
+                            <button type="submit" name="save" style="margin-top:18px;" class="btn btn-prima" value="Search Results... ">
+                                Submit
+                            </button>
+                        </div>
+                    </div><br>
+                </form><br>
+            </div>
+        </div>
+
+        <?php
+            if(isset($_POST['save'])){
+                $category = $_POST['category'];
+            
+        ?>
+        
+            <div class="content">
             <?php
-                $selectn = mysqli_query($conn,"select * from log_student where datetime_out ='0000-00-00 00:00:00'");
-                while($sel = mysqli_fetch_assoc($selectn)){
-                    $id = $sel['students_id'];
-                    $sel1 = mysqli_fetch_assoc(mysqli_query($conn,"select * from students where id = $id"));   
+                if($category=="students" || $category=="all"){
             ?>
-            <tr>
-                <td><?php echo $sel1['admission_no'] ?></td>
-                <td><?php echo $sel1['name'] ?></td>
-                <td><?php echo $sel1['dept'] ?></td>
-                <td><?php echo $sel1['sem'] ?></td>
-            </tr>
+            <b>REPORT OF ACTIVE STUDENT(s): </b>
+            <table id="active_stud">
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Semester</th>
+                </thead>
+                <?php
+                    $selectn = mysqli_query($conn,"select * from log_student where datetime_out ='0000-00-00 00:00:00'");
+                    while($sel = mysqli_fetch_assoc($selectn)){
+                        $id = $sel['students_id'];
+                        $sel1 = mysqli_fetch_assoc(mysqli_query($conn,"select * from students where id = $id"));   
+                ?>
+                <tr>
+                    <td><?php echo $sel1['admission_no'] ?></td>
+                    <td><?php echo $sel1['name'] ?></td>
+                    <td><?php echo $sel1['dept'] ?></td>
+                    <td><?php echo $sel1['sem'] ?></td>
+                </tr>
+                <?php
+                    }
+                ?>
+                </thead>
+            </table>
             <?php
                 }
             ?>
-            </thead>
-        </table>
+
+    <br><br>
+            <?php
+                if($category=="staff" || $category=="all"){
+            ?>
+            <b style="margin-top:20px">REPORT OF ACTIVE STAFF(s): </b>
+            <table id="active_staff">
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                </thead>
+                <?php
+                    $selectn2 = mysqli_query($conn,"select * from log_staff where datetime_out ='0000-00-00 00:00:00'");
+                    while($sel2 = mysqli_fetch_assoc($selectn2)){
+                        $id = $sel2['staff_id'];
+                        $sels1 = mysqli_fetch_assoc(mysqli_query($conn,"select * from staff where id = $id"));   
+                ?>
+                <tr>
+                    <td><?php echo $sels1['id'] ?></td>
+                    <td><?php echo $sels1['name'] ?></td>
+                    <td><?php echo $sels1['department'] ?></td>
+                </tr>
+                <?php
+                    }
+                ?>
+                </thead>
+            </table>
+            <?php
+                }
+            }
+            ?>    
+
+
+
+
+
+
+
 	</div>
 </div>
 </div>
@@ -133,13 +208,16 @@
 
 <script>
     $(document).ready(function () {
-        $('#active').DataTable({
-            dom: 'Bfrtip',
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ]
+        $('#active_stud').DataTable({
+        });
+        $('#active_staff').DataTable({
         });
     });
 </script>
 
 <!-- Datatable Javascript -->
+
+<!-- Content retain for category selection -->
+<script type="text/javascript">
+  document.getElementById('category').value = "<?php echo $_POST['category'];?>";
+</script>

@@ -355,7 +355,11 @@
             <?php 
             if(isset($_POST['timeline'])){
             ?>
-                Displaying reports from <?php echo $timeline ;?>.
+                Displaying reports from <?php
+                $originalDate=$_POST['timeline'];
+                $timeline = date_create($originalDate);
+                echo date_format($timeline, 'd-m-Y H:m:s');
+                  ?>.
 
             <?php 
             }

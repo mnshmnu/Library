@@ -69,14 +69,14 @@
                                     <form method="POST">
                                         <div class="row">
                                             <div class="col">
-                                                From<br><input type="date" value="<?php if(isset($_POST['save'])){ echo $_POST['date_start']; }?>" name="date_start"><br>
+                                                From<br><input type="date" value="<?php if(isset($_POST['save'])){ echo $_POST['date_start']; }?>" name="date_start" required><br>
                                             </div>
                                             <div class="col">
-                                                To<br><input type="date" value="<?php if(isset($_POST['save'])){ echo $_POST['date_end']; }?>" name="date_end"><br>
+                                                To<br><input type="date" value="<?php if(isset($_POST['save'])){ echo $_POST['date_end']; }?>" name="date_end" required><br>
                                             </div>
                                             <div class="col">
-                                                <select name="category" id="category" class="btn btn-prima" style="margin-top:18px;font-size:14px">
-                                                    <option>Select Category
+                                                <select name="category" id="category" class="btn btn-prima" style="margin-top:18px;font-size:14px" required>
+                                                    <option value="">Select Category
                                                     <option value="all">All
                                                     <option value="students">Students
                                                     <option value="staff">Staff
@@ -146,7 +146,7 @@
                                 
 
                                 if($category=="all" || $category=="staff"){
-                                    echo "REPORT OF STAFF VISITS:"; 
+                                    ?> <b> REPORT OF STAFF VISITS: </b> <?php
                                     if(mysqli_num_rows($sel)>0){
                                         // Datatable content-Staff
                                         ?>
@@ -193,8 +193,17 @@
                                             // Datatable content-Staff
                                     }
                                 }
+                                else{
+                                    
+                                    echo "No Staff visit found in the given time period".mysqli_error($conn);
+                                }
 
                                 if($category=="students" || $category=="all"){
+                                    ?>
+                                    <br><br>
+                                    <b>REPORT OF STUDENT VISITS: </b>
+                                    <?php
+                                
                                     if(mysqli_num_rows($selstud)>0){
                                         // Datatable content-Student
                                         ?>
@@ -249,7 +258,7 @@
                                 }
                                 else{
                                     
-                                    echo "No visit found in the given time period".mysqli_error($conn);
+                                    echo "No Student visit found in the given time period".mysqli_error($conn);
                                 }
                             }
                                 ?>
@@ -324,7 +333,7 @@
         $('#table_staff').DataTable({
             dom: 'Bfrtip',
             buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
+                'copy',  'excel', 'pdf', 'print'
             ]
         });
     });
@@ -335,7 +344,7 @@
         $('#table_student').DataTable({
             dom: 'Bfrtip',
             buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
+                'copy', 'excel', 'pdf', 'print'
             ]
         });
     });

@@ -46,7 +46,7 @@ right: 2px !important ;
 .rowing {
     margin-left: 250px;
     padding: 70px 0px;
-    min-height: 100%;
+    min-height: 672px;
     padding-bottom: 200px
 }
 .rowl {
@@ -67,7 +67,7 @@ right: 2px !important ;
     margin-right: -15px;
     margin-left: -15px;
     padding: 70px 0px;
-    padding-bottom: 366px;
+    /* padding-bottom: 366px; */
 
 }
 
@@ -96,7 +96,7 @@ right: 2px !important ;
 
 .paneli {
     margin-bottom: 20px;
-    background-color:rgba(0, 0, 0, 0.1); 
+    
     border-radius: 6px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
