@@ -12,7 +12,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Contact</title>
+	<title>Credits</title>
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
 
@@ -40,7 +40,7 @@
 	
 </head>
 
-<body class="background">
+<body>
 
     <?php include '../Include/navbar.php';?>
 
@@ -52,12 +52,31 @@
     	<div>
     		<img src="../../img/head.png" height=100px width=100% >
     	</div>
-		<div class="contact">
-			<i class="fas fa-user-tie  faa-float animated" style="padding-top:20px;padding-left:30px"></i> Mr. VINOD <br> <br>
-			<i class="fas fa-address-card faa-flash animated"style="padding-left:30px"></i> Software Engineer <br><br>
-			<i class="fas fa-landmark faa-flash animated" style="padding-left:30px"></i> Jyothi Engineering College <br><br>
-			<i class="fas fa-phone faa-pulse animated" style=";padding-left:30px"></i> +91-9567-225-125 
-		<div>
+<!-- EDITED 20-03-19 -->
+		<div class="card w-75" style="margin-left:2%">
+			<div class="card-body">
+				<h4>LIBCOM-Entry Register Automation</h4>
+				<p style="color:blue">LIBCOM is an visitors log management application which helps in automating entry register. It is developed and maintained by Interns at Technology Business Incubator, Jyothi Engineering College, Cheruthuruthy (JECC). LIBCOM is a webapplication running on PHP & MySQL.</p>
+				<h4>Team</h4>
+				<ul>
+				<u>MENTORS</u><br>
+				<li>Fr. Roy Joseph Vadakkan</li>
+				<li>Mr. Vinod K </li>
+				<li>Mr. Shaiju Paul </li>
+				<br><u>Developers</u><br>
+				<li><a href="https://www.linkedin.com/in/deepak-k-v-b51752161">Deepak K V - (CSE-2017-21)</a></li>
+				<li><a href="https://www.linkedin.com/in/sreerag-r-nandan-302a66160">Sreerag R Nandan - (CSE-2017-21)</a></li>
+				<li><a href="https://www.linkedin.com/in/abhijith-v-j-291306171">Abhijith V J - (CSE-2017-21)</a></li>
+				<li><a href="www.linkedin.com/in/maneeshmanoj-reach2me">Maneesh Manoj - (CSE-2017-21)</a></li>
+				</ul>
+				<h4>Timeline</h4>
+				<ul>
+				<li>2018-July:Project idea was presented and work started by Interns guided by Mr Vinod K under the supervision of Fr. Roy Joseph Vadakkan </li>
+				<li>2019-March:Project presented..</li>
+				</ul>
+			</div>	
+		</div>
+<!-- EDITED 20-03-19 -->
 	</div>
 </div>
 </div>

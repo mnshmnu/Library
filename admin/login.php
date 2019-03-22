@@ -185,7 +185,7 @@ alt="Jyothi Official Website">
                 { 
                     if($id =='admin'&& $pass =='admin')
                     {
-                        $_SESSION['admin']="$id";
+                        $_SESSION['admin']=$id;
                         ?>
                         <script> location.replace("pages/index.php"); </script>
                         <?php

@@ -146,10 +146,10 @@
                                 
 
                                 if($category=="all" || $category=="staff"){
-                                    ?> <b> REPORT OF STAFF VISITS: </b> <?php
                                     if(mysqli_num_rows($sel)>0){
                                         // Datatable content-Staff
                                         ?>
+                                        <b> REPORT OF STAFF VISITS: </b>
                                         <table id="table_staff">
                                             <thead>
                                                 <th>Employee Code</th>
@@ -193,20 +193,13 @@
                                             // Datatable content-Staff
                                     }
                                 }
-                                else{
-                                    
-                                    echo "No Staff visit found in the given time period".mysqli_error($conn);
-                                }
 
                                 if($category=="students" || $category=="all"){
-                                    ?>
-                                    <br><br>
-                                    <b>REPORT OF STUDENT VISITS: </b>
-                                    <?php
-                                
                                     if(mysqli_num_rows($selstud)>0){
                                         // Datatable content-Student
                                         ?>
+                                        <br><br>
+                                    <b>REPORT OF STUDENT VISITS: </b>
                                         <table id="table_student">
                                             <thead>
                                                 <th>Admission No</th>
@@ -255,10 +248,6 @@
 
                                             // Datatable content-Student
                                     }
-                                }
-                                else{
-                                    
-                                    echo "No Student visit found in the given time period".mysqli_error($conn);
                                 }
                             }
                                 ?>
