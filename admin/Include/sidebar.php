@@ -11,7 +11,7 @@
 						<li><a href="totals.php">Total Visits</a></li>
 						<li><a href="reports.php">Reports</a></li>
 						<li><a href="date.php">DateWise Scans</a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
+                        <li><a href="credits.php">Credits</a></li>
 						
 					</ul>
 			</li>
