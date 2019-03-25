@@ -38,7 +38,18 @@
       display: flex;
       align-items: center;
     }
-      
+    .backg{
+        max-width: 68rem;
+        padding-left: 65px;
+        position: relative;
+        border-radius: 20px;
+        left: 100px;
+    }
+    .table td, .table th {
+    padding:0px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
     .navbar {
       overflow: hidden;
       background-color: #333;
@@ -49,7 +60,7 @@
 
     .login-box{
     width: 320px;
-    height: 320px;
+    height: 307px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10%;
     color: #fff;
@@ -132,10 +143,27 @@
 </head>
 
 <body>
-<a href="http://www.jecc.ac.in/">
-<img src="image/head.png" style="width:50%" class="center" 
-alt="Jyothi Official Website">
-</a>
+
+
+<div class="backg">
+    <a href="http://www.jecc.ac.in/">
+		<table class="table">
+			<thead>
+	    		<tr>
+					<td>
+		    			<img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/default/jyothi_head_resized.png?125" style="height:123px;width: 100%;background-color: white;" >
+					</td>
+					<td>
+			    		<img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/naac1.jpg"  style="height:123px;width:100%;" >
+					</td>
+					<td>
+				    	<img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/nba.png"  style="height:123px;width:100%;" >
+					</td>
+				</tr>
+			</thead>
+        </table>
+    </a>
+</div>
 <div class="nav" style="height: 500px">
     <ul>
         <li><a href="../index.php" class="btn btn-primary">

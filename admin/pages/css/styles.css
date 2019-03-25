@@ -16,12 +16,7 @@ body{
     top: 10%;    
     font-family: sans-serif;
     }
-p{font-family: 'Poppins', sans-serif;
-  font-size: 1.1em;
-	font-weight: 300;
-	line-height: 1.7em;
-	color: rgb(255, 255, 255);
-}
+
 a,
 a:hover,
 a:focus{
@@ -207,6 +202,25 @@ img:hover {
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.btnclose {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #7dccf1;
+}
+
 
 
 .column-sm-9 {
@@ -220,4 +234,113 @@ img:hover {
     margin-left: 30px;
     font-size: 16px;
     padding: 10px 0px;
+}
+
+.photo {
+    width:150px;
+    border-radius: 20px;
+    box-shadow: -2px 3px rgba(0,0,0,0.2);
+}
+.phot_student {
+    width:100px;
+    border-radius: 20px;
+    box-shadow: -2px 3px rgba(0,0,0,0.2);
+}
+.table td, .table th {
+    padding: 0px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 20px;
+  }
+  td{
+    border-radius: 20px;
+    text-align: -webkit-center;
+    padding: 8px 10px;
+  }
+  th {
+    border-radius: 20px;
+    text-align: -webkit-center;
+    padding-bottom: 40px;
+    padding-top:40px;
+  }
+  
+  tr:nth-child(even) {
+    /* background-color: #dddddd; */
+    /* border-radius: 30px; */
+  }
+
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.671); /* Black w/ opacity */
+    border-radius: 30px;
+  }
+  .card {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    left: 275px;
+    top:250px;
+}
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    color:#000;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #7dccf1;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #myBtn{
+      border-radius: 9px;
+    border: none;
+    padding: 4px 10px;
+    background-color: #05a8f340;
+}
+
+
+
+.listul{
+    font-size: 14px;
+    color:#6f6f7dd4;
+    padding-top: 30px;
 }
