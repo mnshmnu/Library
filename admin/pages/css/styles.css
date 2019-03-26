@@ -55,6 +55,7 @@ right: 2px !important ;
 
 .rowsy {
     height:100%;
+    min-height: 675px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -290,7 +291,7 @@ table {
     border-radius: 30px;
   }
   .card {
-    position: absolute;
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -301,8 +302,7 @@ table {
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    left: 275px;
-    top:250px;
+    
 }
   
   /* Modal Content */
