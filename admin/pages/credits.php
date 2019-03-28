@@ -216,7 +216,8 @@
                             </td>
                         </tr>
 
-                    </table> Developer Table ends -
+                    </table> 
+					<!-- Developer Table ends - -->
 
                     <div class="listul">
                         <ul>
