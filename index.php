@@ -65,12 +65,26 @@
                 /* checking for students */
                 if ($f==1) {
                 /* checking record  exist */
-                $data="select datetime_out from ".$dbName." where ".$Rname." ='".$id2."' and datetime_out='0000-00-00 00:00:00'";
+                $data="select datetime_out,datetime_in from ".$dbName." where ".$Rname." ='".$id2."' and datetime_out='0000-00-00 00:00:00'";
                 $result=mysqli_query($conn,$data);
                 if(mysqli_num_rows($result)>0 ){  
+
+                    // Edited-28-03-19:Added 5sec min exit time
+
                     $DateTimeout=date("Y-m-d H:i:s");
-                    $data="update ".$dbName." set datetime_out='$DateTimeout' where ".$Rname."='$id2'";
-                    mysqli_query($conn,$data);
+                    $DateTimeout2=strtotime($DateTimeout);
+                    $row=mysqli_fetch_assoc($result);
+                    $DateTimein2=strtotime($row['datetime_in']);
+                    $fch=0;
+                    if(($DateTimeout2-$DateTimein2)>5){
+                        $data="update ".$dbName." set datetime_out='$DateTimeout' where ".$Rname."='$id2'";
+                        mysqli_query($conn,$data);
+                    }
+                    else{
+                        $fch=1;
+                    }
+                    // Edited-28-03-19:Added 5sec min exit time
+
                 }
                 /* checking record  exist */            
                 else{
@@ -122,7 +136,7 @@
     </div>
     <!-- ----------------------display board starts---------------------------------------------- -->
     <!-- erase style to regain original position --> 
-    <?php if(isset($_POST['save'])){ ?>
+    <?php if(isset($_POST['save']) && $fch!=1){ ?>
         <div style="position: absolute;z-index: 100;bottom:200px;left:200px;width: 1000px"> 
     <div class="container">
         <div class="row">
