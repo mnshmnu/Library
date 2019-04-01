@@ -136,6 +136,14 @@
     bottom:50%;
     }
 
+    #logo img {
+    opacity: 0;
+    -moz-transition: opacity 5s; /* Firefox 4 */
+    -webkit-transition: opacity 5s; /* Safari and Chrome */
+    -o-transition: opacity 5s;
+    transition: opacity 5s;
+    max-height:100px;
+}
    </style>
     
 
@@ -144,13 +152,9 @@
 </head>
 
 <body>
+<div id="logo"><p><a href="jecc.ac.in"><img src="image/logos.png" ... onload="this.style.opacity='1';" /></a></p></div>
 
 
-<div class="backg">
-    <a href="http://www.jecc.ac.in/">
-		<img src="image/logo.png">
-    </a>
-</div>
 <div class="nav" style="height: 500px">
     <ul>
         <li><a href="../index.php" class="btn btn-primary">
