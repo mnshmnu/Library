@@ -49,24 +49,9 @@
         <!--Side Bar/Menu-->
         <?php include '../Include/sidebar.php';?>
         <!--/-Side Bar/Menu  ended-->
-        <div class="content">
-            
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td>
-                                <img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/default/jyothi_head_resized.png?125" style="height:159px;width: 100%;">
-                            </td>
-                            <td>
-                                <img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/naac1.jpg" style="height:159px;width:100%;">
-                            </td>
-                            <td>
-                                <img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/nba.png" style="height:159px;width:100%;">
-                            </td>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+        <div class="image_head">
+            <img src="img/header.png" class="img_099">
+        </div>
             <!-- EDITED 20-03-19 -->
             <div class="card w-75" style="margin-left:2%">
                 <div class="card-body">

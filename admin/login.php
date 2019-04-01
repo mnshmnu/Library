@@ -43,7 +43,6 @@
         padding-left: 65px;
         position: relative;
         border-radius: 20px;
-        left: 100px;
     }
     .table td, .table th {
     padding:0px;
@@ -64,7 +63,7 @@
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10%;
     color: #fff;
-    top: 50%;
+    top: 55%;
     left: 86%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -128,6 +127,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
+    border-radius: 20px;
     }   
 
     .sm-menu a,.col a{
@@ -147,21 +148,7 @@
 
 <div class="backg">
     <a href="http://www.jecc.ac.in/">
-		<table class="table">
-			<thead>
-	    		<tr>
-					<td>
-		    			<img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/default/jyothi_head_resized.png?125" style="height:123px;width: 100%;background-color: white;" >
-					</td>
-					<td>
-			    		<img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/naac1.jpg"  style="height:123px;width:100%;" >
-					</td>
-					<td>
-				    	<img src="http://static.jecc.ac.in/jecc.ac.in/assets/images/nba.png"  style="height:123px;width:100%;" >
-					</td>
-				</tr>
-			</thead>
-        </table>
+		<img src="image/logo.png">
     </a>
 </div>
 <div class="nav" style="height: 500px">
