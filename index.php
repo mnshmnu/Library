@@ -122,7 +122,7 @@
 <title> Library-JECC </title>
 </head>
 <body>
-    <a href="jecc.ac.in">
+    <a href="https://jecc.ac.in">
     <img src="img/head.png" style="width:50%" class="center" alt="Jyothi Official Website">
     </a>
     <div class="nav" style="height: 500px">
