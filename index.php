@@ -1,5 +1,5 @@
 <?php 
-        include('admin/config.php');
+        include('admin/pages/config.php');
         $r=0;
         
         date_default_timezone_set('Asia/Kolkata');

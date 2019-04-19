@@ -52,7 +52,7 @@
                 // Timeframe selection
 
                 // Department Wise
-                $cse=0;$ce=0;$ece=0;$eee=0;$me=0;$mre=0;
+                $cse=0;$ce=0;$ece=0;$eee=0;$me=0;$mr=0;
                 $sel = mysqli_query($conn,"select admission_no from log_student where datetime_in between '$timeline' and '$today'");
                 $total_no = mysqli_num_rows($sel);
                 $sel = mysqli_query($conn,"Select students_id from log_student where datetime_in between '$timeline' and '$today'");
@@ -63,23 +63,23 @@
                         if(mysqli_num_rows($sel1)>0){
                             while($data1 = mysqli_fetch_assoc($sel1)){
                                 $department = $data1['dept'];
-                                if($department=="CSE"){
+                                if($department=="CSE(B)" || $department=="CSE(A)"){
                                     $cse++;
                                 }
                                 if($department=="CE"){
                                     $ce++;
                                 }
-                                if($department=="ECE"){
+                                if($department=="ECE(B)" || $department=="ECE(A)" || $department=="ECE(R)"){
                                     $ece++;
                                 }
-                                if($department=="EEE"){
+                                if($department=="EEE" || $department=="EEE(R)"){
                                     $eee++;
                                 }
-                                if($department=="ME"){
+                                if($department=="ME-B" || $department=="ME-A"){
                                     $me++;
                                 }
-                                if($department=="MRE"){
-                                    $mre++;
+                                if($department=="MR"){
+                                    $mr++;
                                 }
                             }
                         }
@@ -94,7 +94,7 @@
 ?>
 <?php
                 // Department Wise
-    $dcse = 0;$dce = 0;$dece = 0;$deee = 0;$dme = 0;$dmre = 0;$dmgm = 0;
+    $dcse = 0;$dce = 0;$dece = 0;$deee = 0;$dme = 0;$dmr = 0;$dbsh = 0;$dlib = 0;$dit = 0;$dtbi = 0;$doff = 0;$dcc = 0;$drsh = 0;
     $sel3 = mysqli_query($conn, "select employee_code from log_staff where datetime_in between '$timeline' and '$today'");
     $totalsno = mysqli_num_rows($sel3);
 
@@ -121,11 +121,29 @@
                 if ($dept == "ME") {
                     $dme++;
                 }
-                if ($dept == "MRE") {
-                    $dmre++;
+                if ($dept == "BSH") {
+                    $dbsh++;
                 }
-                if ($dept == "MGM") {
-                    $dmgm++;
+                if ($dept == "LIB") {
+                    $dlib++;
+                }
+                if ($dept == "IT") {
+                    $dit++;
+                }
+                if ($dept == "TBI") {
+                    $dtbi++;
+                }
+                if ($dept == "OFF") {
+                    $doff++;
+                }
+                if ($dept == "CC") {
+                    $dcc++;
+                }
+                if ($dept == "RSH") {
+                    $drsh++;
+                }
+                if ($dept == "MR") {
+                    $dmr++;
                 }
             }
         } else {
@@ -145,7 +163,7 @@
     $visit_staff = mysqli_num_rows($data1);
 ?>
 <?php
-        $s1 = 0;$s2 = 0;$s3 = 0;$s4 = 0;$s5 = 0;$s6 = 0;$s7 = 0;$s8 = 0;
+        $s1 = 0;$s2 = 0;$s3 = 0;$s4 = 0;$s5 = 0;$s6 = 0;$s7 = 0;$s8 = 0;$s1m = 0;$s2m = 0;$s3m = 0;$s4m = 0;
         $mel = mysqli_query($conn, "select admission_no from log_student where datetime_in between '$timeline' and '$today'");
         $totals_no = mysqli_num_rows($mel);
 
@@ -181,6 +199,18 @@
                 if ($sem == "S8") {
                     $s8++;
                 }
+                if ($sem == "S1-MTECH") {
+                    $s1m++;
+                }
+                if ($sem == "S2-MTECH") {
+                    $s2m++;
+                }
+                if ($sem == "S3-MTECH") {
+                    $s3m++;
+                }
+                if ($sem == "S4-MTECH") {
+                    $s4m++;
+                }
             }
         } else {
             echo "No matching records found in Database";
@@ -215,7 +245,7 @@
             $uece = 0;
             $ueee = 0;
             $ume = 0;
-            $umre = 0;
+            $umr = 0;
             $usel = mysqli_query($conn, "select admission_no from log_student where datetime_in between '$timeline' and '$today'");
             $utotal_no = mysqli_num_rows($sel);
 
@@ -231,29 +261,23 @@
                         while ($data1 = mysqli_fetch_assoc($sel1)) 
                         {
                             $department = $data1['dept'];
-                            if ($department == "CSE") 
-                            {
+                            if($department=="CSE(B)" || $department=="CSE(A)"){
                                 $ucse++;
                             }
-                            if ($department == "CE") 
-                            {
+                            if($department=="CE"){
                                 $uce++;
                             }
-                            if ($department == "ECE") 
-                            {
+                            if($department=="ECE(B)" || $department=="ECE(A)" || $department=="ECE(R)"){
                                 $uece++;
                             }
-                            if ($department == "EEE") 
-                            {
+                            if($department=="EEE" || $department=="EEE(R)"){
                                 $ueee++;
                             }
-                            if ($department == "ME") 
-                            {
+                            if($department=="ME-B" || $department=="ME-A"){
                                 $ume++;
                             }
-                            if ($department == "MRE") 
-                            {
-                                $umre++;
+                            if($department=="MR"){
+                                $umr++;
                             }
                         }
                     } 
@@ -276,7 +300,7 @@
 
 <?php
                 // Department Wise
-    $fcse = 0;$fce = 0;$fece = 0;$feee = 0;$fme = 0;$fmre = 0;$fmgm = 0;
+    $fcse = 0;$fce = 0;$fece = 0;$feee = 0;$fme = 0;$fmr = 0;$fbsh = 0;$flib = 0;$fit = 0;$ftbi = 0;$foff = 0;$fcc = 0;$frsh = 0;
     $fsel = mysqli_query($conn, "select employee_code from log_staff where datetime_in between '$timeline' and '$today'");
     $ftotal_no = mysqli_num_rows($fsel);
 
@@ -288,26 +312,44 @@
         if (mysqli_num_rows($fsel1) > 0) {
             while ($fdata1 = mysqli_fetch_assoc($fsel1)) {
                 $fdepartment = $fdata1['department'];
-                if ($fdepartment == "CSE") {
+                if ($dept == "CSE") {
                     $fcse++;
                 }
-                if ($fdepartment == "CE") {
+                if ($dept == "CE") {
                     $fce++;
                 }
-                if ($fdepartment == "ECE") {
+                if ($dept == "ECE") {
                     $fece++;
                 }
-                if ($fdepartment == "EEE") {
+                if ($dept == "EEE") {
                     $feee++;
                 }
-                if ($fdepartment == "ME") {
+                if ($dept == "ME") {
                     $fme++;
+                }   
+                if ($dept == "BSH") {
+                    $fbsh++;
                 }
-                if ($fdepartment == "MRE") {
-                    $fmre++;
+                if ($dept == "LIB") {
+                    $flib++;
                 }
-                if ($fdepartment == "MGM") {
-                    $fmgm++;
+                if ($dept == "IT") {
+                    $fit++;
+                }
+                if ($dept == "TBI") {
+                    $ftbi++;
+                }
+                if ($dept == "OFF") {
+                    $foff++;
+                }
+                if ($dept == "CC") {
+                    $fcc++;
+                }
+                if ($dept == "RSH") {
+                    $frsh++;
+                }
+                if ($dept == "MR") {
+                    $fmr++;
                 }
             }
         } else {
@@ -325,8 +367,14 @@
     array("label" => "Electronic & Commn Engg", "symbol" => "ECE", "y" => $fece),
     array("label" => "Electrical Engg", "symbol" => "EEE", "y" => $feee),
     array("label" => "Mechanical Engg", "symbol" => "ME", "y" => $fme),
-    array("label" => "Mechatronic Engg", "symbol" => "MRE", "y" => $fmre),
-    array("label" => "Management", "symbol" => "MGMT", "y" => $fmgm),
+    array("label" => "Mechatronics Engg", "symbol" => "MRE", "y" => $fmr),
+    array("label" => "Office", "symbol" => "OFF", "y" => $foff),
+    array("label" => "Basic Science and Humanities", "symbol" => "BSH", "y" => $fbsh),
+    array("label" => "Library", "symbol" => "LIB", "y" => $flib),
+    array("label" => "Information Technology", "symbol" => "IT", "y" => $fit),
+    array("label" => "Technology Business Incubator", "symbol" => "TBI", "y" => $ftbi),
+    array("label" => "Computer Centre", "symbol" => "CC", "y" => $fcc),
+    array("label" => "Research", "symbol" => "RSH", "y" => $frsh),
         )
 ?>
 
@@ -462,7 +510,7 @@
         ["ECE", <?php echo $uece; ?>, "red"],
         ["EEE", <?php echo $ueee; ?>, "blue"],
         ["ME",<?php echo $ume; ?>, "Teal"],
-        ["MRE",<?php echo $umre; ?>, "Violet"]
+        ["MRE",<?php echo $umr; ?>, "Violet"]
 
 
         
@@ -502,8 +550,14 @@
           ['ECE', <?php echo $dece; ?>],
           ['EEE', <?php echo $deee; ?>],
           ['ME',  <?php echo $dme; ?>],
-          ['MRE', <?php echo $dmre; ?>],
-          ['MGM', <?php echo $dmgm; ?>]
+          ['MRE', <?php echo $dmr; ?>],
+          ['OFF', <?php echo $doff; ?>]
+          ['BSH', <?php echo $dbsh; ?>]
+          ['CC', <?php echo $dcc; ?>]
+          ['RSH', <?php echo $drsh; ?>]
+          ['TBI', <?php echo $dtbi; ?>]
+          ['IT', <?php echo $dit; ?>]
+          ['LIB', <?php echo $dlib; ?>]
         ]);
 
         var options = {
@@ -562,7 +616,7 @@
           ['ECE',  <?php echo $ece; ?>],
           ['EEE',  <?php echo $eee; ?>],
           ['MECH', <?php echo $me; ?>],
-          ['MR', <?php echo $mre; ?>],
+          ['MR', <?php echo $mr; ?>],
         ]);
 
 
