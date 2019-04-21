@@ -1,3 +1,3 @@
 <?php
-    $conn = mysqli_connect('localhost','root','','lib_new');
+    $conn = mysqli_connect('localhost','root','','library');
 ?>
