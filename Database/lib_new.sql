@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2019 at 05:36 AM
+-- Generation Time: May 03, 2019 at 07:53 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -19,8 +19,30 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `library`
+-- Database: `lib_new`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `holnum`
+--
+
+CREATE TABLE `holnum` (
+  `id` int(11) NOT NULL,
+  `month` tinyint(2) NOT NULL,
+  `year` year(4) NOT NULL,
+  `num` tinyint(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `holnum`
+--
+
+INSERT INTO `holnum` (`id`, `month`, `year`, `num`) VALUES
+(1, 5, 2019, 26),
+(2, 5, 2019, 30),
+(3, 5, 2018, 52);
 
 -- --------------------------------------------------------
 
@@ -65,13 +87,18 @@ INSERT INTO `log_student` (`id`, `students_id`, `admission_no`, `datetime_in`, `
 (1, 4092, '11712055', '2019-04-19 08:47:19', '0000-00-00 00:00:00'),
 (2, 4135, '11712069', '2019-04-19 08:47:29', '0000-00-00 00:00:00'),
 (3, 4038, '11712054', '2019-04-19 08:47:40', '0000-00-00 00:00:00'),
-(4, 4105, '11712099', '2019-04-19 08:48:09', '2019-04-19 08:48:16'),
+(4, 4105, '11712099', '2019-04-19 08:48:09', '2019-05-03 20:24:09'),
 (5, 2620, '11404076', '2019-04-19 08:58:31', '0000-00-00 00:00:00'),
-(6, 4140, '11712064', '2019-04-19 09:02:36', '0000-00-00 00:00:00'),
+(6, 4140, '11712064', '2019-04-19 09:02:36', '2019-04-25 12:41:23'),
 (7, 4141, '11712063', '2019-04-19 09:02:41', '0000-00-00 00:00:00'),
 (8, 4139, '11712065', '2019-04-19 09:02:47', '0000-00-00 00:00:00'),
 (9, 4136, '11712068', '2019-04-19 09:02:56', '0000-00-00 00:00:00'),
-(10, 4082, '11712001', '2019-04-19 09:03:02', '0000-00-00 00:00:00');
+(10, 4082, '11712001', '2019-04-19 09:03:02', '0000-00-00 00:00:00'),
+(11, 4105, '11712099', '2019-04-25 12:34:59', '2019-05-03 20:24:09'),
+(12, 4084, '11712003', '2019-04-25 12:35:08', '2019-04-25 12:43:18'),
+(13, 4140, '11712064', '2019-04-25 12:41:02', '2019-04-25 12:41:23'),
+(14, 4140, '11712064', '2019-04-25 12:42:18', '0000-00-00 00:00:00'),
+(15, 4084, '11712003', '2019-04-25 12:43:25', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -2166,6 +2193,12 @@ INSERT INTO `students` (`id`, `admission_no`, `name`, `dept`, `sem`) VALUES
 --
 
 --
+-- Indexes for table `holnum`
+--
+ALTER TABLE `holnum`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `log_staff`
 --
 ALTER TABLE `log_staff`
@@ -2195,6 +2228,12 @@ ALTER TABLE `students`
 --
 
 --
+-- AUTO_INCREMENT for table `holnum`
+--
+ALTER TABLE `holnum`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `log_staff`
 --
 ALTER TABLE `log_staff`
@@ -2204,7 +2243,7 @@ ALTER TABLE `log_staff`
 -- AUTO_INCREMENT for table `log_student`
 --
 ALTER TABLE `log_student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `staff`
