@@ -63,7 +63,7 @@
 							<div class="panel-heading">
 								<div class="row">
 									<div class="col-xs-3">
-										<i class="fas fa-user-graduate faa-flash animated" style="font-size:68px"></i>
+										<i class="fas fa-user-graduate faa-flash animated" style="font-size:68px;padding:15px"></i>
 									</div>
 									<div class="col-xs-9 text-right">
 										<div class="huge" style="padding-left:100px">Faculty</div>
@@ -88,14 +88,39 @@
 							<div class="panel-heading">
 								<div class="row">
 									<div class="col-xs-3">
-										<i class="fas fa-chalkboard-teacher faa-pulse animated" style="font-size:68px"></i>
+										<i class="fas fa-chalkboard-teacher faa-pulse animated" style="font-size:68px;padding:15px"></i>
 									</div>
 									<div class="col-xs-9 text-right">
-										<div class="huge" style="padding-left:80px">Student</div>
+										<div class="huge" style="padding-left:60px">Student</div>
 										<div>Reports</div>
 									</div>
 								</div>
 								<a href="stud_rep.php">
+									<span class="pull-left">
+										<p style="color:White;">View Details</p>
+									</span>
+									<span class="pull-right">
+										<i class="fa fa-arrow-circle-right faa-passing animated" style="font-size:20px"></i>
+									</span>
+									<div class="clearfix"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="rows">
+						<!-- All Reports -->
+						<div class="panel panel-yellow">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class="fas fa-calendar-alt" style="font-size:68px;padding:15px"></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge" style="padding-left:80px">Monthly</div>
+										<div>Reports</div>
+									</div>
+								</div>
+								<a href="mnth.php">
 									<span class="pull-left">
 										<p style="color:White;">View Details</p>
 									</span>
