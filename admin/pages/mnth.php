@@ -34,7 +34,16 @@
 	<![endif]-->
 </head>
 <body>
-    
+   <?php
+   $sql ="SELECT * FROM `log_student` GROUP BY datetime_in";
+   $query=  mysqli_query($conn,$sql);
+   if(mysqli_num_rows($query)>0){
+    while($row = mysqli_fetch_assoc($query)){
+        echo $row['datetime_in']; 
+        ?><br><?php
+    }
+} 
+?>
 </body>
 </html>
 
