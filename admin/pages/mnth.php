@@ -28,9 +28,24 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 </head>
 <body>
+<form method="POST">
+<select name="year" required>
+  <option value="<?php if(isset($_POST['save'])){ echo $_POST['year']; }?>"><?php if(isset($_POST['save'])){ echo $_POST['year']; }else{echo "Select Year";}?></option>
+  <?php
+    for ($year = 2018; $year <= date("Y"); $year++) {
+      $selected = (isset($getYear) && $getYear == $year) ? 'selected' : '';
+      echo "<option value=$year $selected>$year</option>";
+    }
+  ?>
+</select>
+<button type="submit" name="save" value="Search Results... ">
+                                                    Submit
+</button>
+</form>
 <?php
+if(isset($_POST['save'])){$y=$_POST['year'];}
 $val = array();
-$sql = "SELECT *,MONTH(datetime_in),DATE(datetime_in) FROM `log_student`";
+$sql = "SELECT *,MONTH(datetime_in),DATE(datetime_in) FROM `log_student` where YEAR(datetime_in)='$y'";
 $query=  mysqli_query($conn,$sql);  
 if(mysqli_num_rows($query)>0){
     while($row = mysqli_fetch_assoc($query)){
