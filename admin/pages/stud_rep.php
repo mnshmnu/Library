@@ -52,7 +52,7 @@
             <div class="ctt">
                 <div class="col-lg-12">
                    <section class="content-header">                                                                            <!-- Content Header (Page header) -->
-                        <h1>Faculty Reports</h1>
+                        <h1>Student Reports</h1>
                         <hr>
                     </section>
                 </div>

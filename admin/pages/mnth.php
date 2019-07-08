@@ -43,9 +43,10 @@
 </button>
 </form>
 <?php
-if(isset($_POST['save'])){$y=$_POST['year'];}
+$yr=date("Y");
+if(isset($_POST['save'])){$yr=$_POST['year'];}
 $val = array();
-$sql = "SELECT *,MONTH(datetime_in),DATE(datetime_in) FROM `log_student` where YEAR(datetime_in)='$y'";
+$sql = "SELECT *,MONTH(datetime_in),DATE(datetime_in) FROM `log_student` where YEAR(datetime_in)='$yr'";
 $query=  mysqli_query($conn,$sql);  
 if(mysqli_num_rows($query)>0){
     while($row = mysqli_fetch_assoc($query)){
