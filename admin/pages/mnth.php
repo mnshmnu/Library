@@ -49,15 +49,14 @@
                     </section>
                 </div>
                 
-                <div class="cntnt">
                     <form method="POST">
                         <select name="year" required>
                         <option value="<?php if(isset($_POST['save'])){ echo $_POST['year']; }?>"><?php if(isset($_POST['save'])){ echo $_POST['year']; }else{echo "Select Year";}?></option>
                         <?php
                             for ($year = 2018; $year <= date("Y"); $year++) {
-                            $selected = (isset($getYear) && $getYear == $year) ? 'selected' : '';
+                                $selected = (isset($getYear) && $getYear == $year) ? 'selected' : '';
                             echo "<option value=$year $selected>$year</option>";
-                            }
+                        }
                         ?>
                         </select>
                         <button class="butn butn-5 butn-5a icon-cog" type="submit" name="save" value="Search Results... "><span>Submit</span></button>
@@ -99,8 +98,9 @@
                                 $work[$m] = 1;
                             }    
                         }
-                    ?>
-                    <table id="report_stud" border="1" style="border-style: outset;padding:3px 7px" >
+                        ?>
+                    <div id="report_stud" class="cntnt">
+                    <table border="1" style="border-style: outset;padding:3px 7px" >
                         <thead style="background-color: #05a8f3;" >
                             <th>SL.No</th>
                             <th>Date</th>
@@ -136,6 +136,10 @@
                         </tbody>
                     </table>
                 </div>
+                    <p>
+                        <input type="button" value="Create PDF" 
+                            id="btPrint" onclick="createPDF()" />
+                    </p>
             </div>
         </div>
     </div>
@@ -228,6 +232,33 @@
 			}, false );
 		</script>
 
+
+<script>
+    function createPDF() {
+        var sTable = document.getElementById('report_stud').innerHTML;
+
+        var style = "<style>";
+        style = style + "table {width: 100%;font: 17px Calibri;}";
+        style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style = style + "padding: 2px 3px;text-align: center;}";
+        style = style + "</style>";
+
+        // CREATE A WINDOW OBJECT.
+        var win = window.open('', '', 'height=700,width=700');
+
+        win.document.write('<html><head>');
+        win.document.write('<title>Report</title>');   // <title> FOR PDF HEADER.
+        win.document.write(style);          // ADD STYLE INSIDE THE HEAD TAG.
+        win.document.write('</head>');
+        win.document.write('<body>');
+        win.document.write(sTable);         // THE TABLE CONTENTS INSIDE THE BODY TAG.
+        win.document.write('</body></html>');
+
+        win.document.close(); 	// CLOSE THE CURRENT WINDOW.
+
+        win.print();    // PRINT THE CONTENTS.
+    }
+</script>
 
 </body>
 </html>
