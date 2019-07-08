@@ -100,8 +100,8 @@
                             }    
                         }
                     ?>
-                    <table id="report_stud" style="border-style: outset;padding:3px 7px" >
-                        <thead style="background-color: #05a8f3;">
+                    <table id="report_stud" border="1" style="border-style: outset;padding:3px 7px" >
+                        <thead style="background-color: #05a8f3;" >
                             <th>SL.No</th>
                             <th>Date</th>
                             <th>Month</th>
@@ -183,7 +183,7 @@
         <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
         
-        <script>
+        <!-- <script>
             $(document).ready(function() {
             $('#report_stud').DataTable( {
                 dom: 'Bfrtip',
@@ -192,7 +192,7 @@
                 ]
             } );
             } );
-        </script>
+        </script> -->
         <script src="js/classie.js"></script>
 		<script>
 			var buttons7Click = Array.prototype.slice.call( document.querySelectorAll( '#btn-click button' ) ),
