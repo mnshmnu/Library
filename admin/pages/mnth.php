@@ -44,7 +44,7 @@
             <div class="ctt">
                 <div class="col-lg-12">
                    <section class="content-header">                                                                            <!-- Content Header (Page header) -->
-                        <h1>Student Reports</h1>
+                        <h1>Monthwise Reports</h1>
                         <hr>
                     </section>
                 </div>
@@ -67,7 +67,7 @@
                         $yr=date("Y");
                         if(isset($_POST['save'])){$yr=$_POST['year'];}
                         $val = array();
-                        $sql = "SELECT *,MONTH(datetime_in),DATE(datetime_in) FROM `log_student` where YEAR(datetime_in)='$yr'";
+                        $sql = "SELECT *,MONTH(datetime_in),DATE(datetime_in) FROM `log_student` where YEAR(datetime_in)='$yr' UNION ALL SELECT *,MONTH(datetime_in),DATE(datetime_in) FROM `log_staff` where YEAR(datetime_in)='$yr'";
                         $query=  mysqli_query($conn,$sql);  
                         if(mysqli_num_rows($query)>0){
                             while($row = mysqli_fetch_assoc($query)){
@@ -137,8 +137,8 @@
                     </table>
                 </div>
                     <p>
-                    <br>
-                        <input type="button" class="butn butn-6 butn-6a icon-cog" style="position: relative;left: 950px;" value="Create PDF" id="btPrint" onclick="createPDF()" />
+                        <input type="button" value="Create PDF" 
+                            id="btPrint" onclick="createPDF()" />
                     </p>
             </div>
         </div>

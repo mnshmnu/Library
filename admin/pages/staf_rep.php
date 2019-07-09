@@ -64,8 +64,8 @@
                         $query = mysqli_query($conn,"Select staff.employee_code,name,department,datetime_in,datetime_out from log_staff,staff where log_staff.staff_id = staff.id");
                         if(mysqli_num_rows($query)>0){
                     ?>
-                    <table id="report_staff">
-                        <thead>
+                    <table id="report_staff" style="border-style: outset;padding:3px 7px">
+                        <thead style="background-color: #05a8f3;">
                             <th>Employee Code</th>
                             <th>Name</th>
                             <th>Department</th>
