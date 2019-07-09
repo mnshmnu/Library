@@ -137,8 +137,8 @@
                     </table>
                 </div>
                     <p>
-                        <input type="button" value="Create PDF" 
-                            id="btPrint" onclick="createPDF()" />
+                    <br>
+                        <input type="button" class="butn butn-6 butn-6a icon-cog" style="position: relative;left: 950px;" value="Create PDF" id="btPrint" onclick="createPDF()" />
                     </p>
             </div>
         </div>

@@ -55,88 +55,93 @@
 					</section>
 				</div>
 				<!--Main Content-->
-			<div class="rows">
-				<div class="col-sm-7">
-					<div class="rows">
-						<!-- Total Visits -->
-						<div class="panel panel-vio">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fas fa-user-graduate faa-flash animated" style="font-size:68px;padding:15px"></i>
+									<!-- New alignment of report option boxes added-->
+									<div class="container">
+										<div class="row">
+											<div class="col-sm">	<!-- Faculty and Student reports-->
+												<div class="rows">
+													<!-- Total Visits -->
+													<div class="panel panel-vio">
+														<div class="panel-heading">
+															<div class="row">
+																<div class="col-xs-3">
+																	<i class="fas fa-user-graduate faa-flash animated" style="font-size:68px;padding:15px"></i>
+																</div>
+																<div class="col-xs-9 text-right">
+																	<div class="huge" style="padding-left:100px">Faculty</div>
+																	<div> Reports</div>
+																</div>
+															</div>
+															<a href="staf_rep.php">
+																<span class="pull-left">
+																	<p style="color:White;">View Details</p>
+																</span>
+																<span class="pull-right">
+																	<i class="fa fa-arrow-circle-right faa-passing animated" style="font-size:20px"></i>
+																</span>
+																<div class="clearfix"></div>
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="rows">
+													<!-- All Reports -->
+													<div class="panel panel-yellow">
+														<div class="panel-heading">
+															<div class="row">
+																<div class="col-xs-3">
+																	<i class="fas fa-chalkboard-teacher faa-pulse animated" style="font-size:68px;padding:15px"></i>
+																</div>
+																<div class="col-xs-9 text-right">
+																	<div class="huge" style="padding-left:60px">Student</div>
+																	<div>Reports</div>
+																</div>
+															</div>
+															<a href="stud_rep.php">
+																<span class="pull-left">
+																	<p style="color:White;">View Details</p>
+																</span>
+																<span class="pull-right">
+																	<i class="fa fa-arrow-circle-right faa-passing animated" style="font-size:20px"></i>
+																</span>
+																<div class="clearfix"></div>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm">	<!-- Monthly Reports-->						
+												<div class="rows">
+													<!-- All Reports -->
+													<div class="panel panel-yellow">
+														<div class="panel-heading">
+															<div class="row">
+																<div class="col-xs-3">
+																	<i class="fas fa-calendar-alt" style="font-size:68px;padding:15px"></i>
+																</div>
+																<div class="col-xs-9 text-right">
+																	<div class="huge" style="padding-left:80px">Monthly</div>
+																	<div>Reports</div>
+																</div>
+															</div>
+															<a href="mnth.php">
+																<span class="pull-left">
+																	<p style="color:White;">View Details</p>
+																</span>
+																<span class="pull-right">
+																	<i class="fa fa-arrow-circle-right faa-passing animated" style="font-size:20px"></i>
+																</span>
+																<div class="clearfix"></div>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm">	<!-- Images-->
+												<img class="img-responsive" src="../../img/prin.png" alt="Chania" width="460" height="345" style="padding-left:70px"> 
+											</div>
+										</div>
 									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge" style="padding-left:100px">Faculty</div>
-										<div> Reports</div>
-									</div>
-								</div>
-								<a href="staf_rep.php">
-									<span class="pull-left">
-										<p style="color:White;">View Details</p>
-									</span>
-									<span class="pull-right">
-										<i class="fa fa-arrow-circle-right faa-passing animated" style="font-size:20px"></i>
-									</span>
-									<div class="clearfix"></div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="rows">
-						<!-- All Reports -->
-						<div class="panel panel-yellow">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fas fa-chalkboard-teacher faa-pulse animated" style="font-size:68px;padding:15px"></i>
-									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge" style="padding-left:60px">Student</div>
-										<div>Reports</div>
-									</div>
-								</div>
-								<a href="stud_rep.php">
-									<span class="pull-left">
-										<p style="color:White;">View Details</p>
-									</span>
-									<span class="pull-right">
-										<i class="fa fa-arrow-circle-right faa-passing animated" style="font-size:20px"></i>
-									</span>
-									<div class="clearfix"></div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="rows">
-						<!-- All Reports -->
-						<div class="panel panel-yellow">
-							<div class="panel-heading">
-								<div class="row">
-									<div class="col-xs-3">
-										<i class="fas fa-calendar-alt" style="font-size:68px;padding:15px"></i>
-									</div>
-									<div class="col-xs-9 text-right">
-										<div class="huge" style="padding-left:80px">Monthly</div>
-										<div>Reports</div>
-									</div>
-								</div>
-								<a href="mnth.php">
-									<span class="pull-left">
-										<p style="color:White;">View Details</p>
-									</span>
-									<span class="pull-right">
-										<i class="fa fa-arrow-circle-right faa-passing animated" style="font-size:20px"></i>
-									</span>
-									<div class="clearfix"></div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div><!-- end of 1st column-->
-				<div class="col-sm-5">
-					<img class="img-responsive" src="../../img/prin.png" alt="Chania" width="460" height="345" style="padding-left:70px"> 
-				</div><!--End of 2nd column-->
-			</div>
 				
 			</div> <!--End Of Main Content-->
         </div> <!-- end cntnt-->

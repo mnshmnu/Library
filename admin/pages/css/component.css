@@ -213,3 +213,68 @@
 .butn-5b:hover:before {
 	left: 0;
 }
+
+
+/* Button 5 */
+.butn-6 {
+    background: #f63809;
+    color: #fff;
+    height: 35px;
+    min-width: 80px;
+    line-height: 24px;
+    font-size: 11px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.butn-6:active {
+	background: #f63809;
+	top: 0px;
+}
+
+.butn-6 span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+}
+
+.butn-6:before {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	line-height: 2.5;
+	font-size: 180%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.butn-6:active:before {
+	color: #703b87;
+}
+
+/* Button 5a */
+.butn-6a:hover span {
+	-webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+.butn-6a:before {
+	left: 0;
+	top: -100%;
+}
+
+.butn-6a:hover:before {
+	top: 0;
+}
+
